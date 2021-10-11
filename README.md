@@ -24,7 +24,7 @@ For available releases please see [the releases page](https://github.com/christi
 ### Setup everything for CI builds
 
 ```sh
-curl https://github.com/christian-stockinger/UnityBuildTools/archive/refs/tags/${BUILD_TOOLS_VERSION}.zip -L --output UnityBuildFiles.zip && unzip UnityBuildFiles.zip
+curl https://github.com/christian-stockinger/UnityBuildTools/releases/download/${BUILD_TOOLS_VERSION}/UnityBuildTools.zip -L --output UnityBuildFiles.zip && unzip UnityBuildFiles.zip
 chmod +x ./ci/before_script.sh && ./ci/before_script.sh
 chmod +x ${HOME}/.local/share/unity3d/Unity/Unity_lic.ulf
 ```
@@ -32,14 +32,14 @@ chmod +x ${HOME}/.local/share/unity3d/Unity/Unity_lic.ulf
 ### Get the activation file
 
 ```sh
-curl https://github.com/christian-stockinger/UnityBuildTools/archive/refs/tags/${BUILD_TOOLS_VERSION}.zip -L --output UnityBuildFiles.zip && unzip UnityBuildFiles.zip
+curl https://github.com/christian-stockinger/UnityBuildTools/releases/download/${BUILD_TOOLS_VERSION}/UnityBuildTools.zip -L --output UnityBuildFiles.zip && unzip UnityBuildFiles.zip
 chmod +x ./ci/get_activation_file.sh && ./ci/get_activation_file.sh
 ```
 
 ### Execute the build process
 
 ```sh
-curl https://github.com/christian-stockinger/UnityBuildTools/archive/refs/tags/${BUILD_TOOLS_VERSION}.zip -L --output UnityBuildFiles.zip && unzip UnityBuildFiles.zip
+curl https://github.com/christian-stockinger/UnityBuildTools/releases/download/${BUILD_TOOLS_VERSION}/UnityBuildTools.zip -L --output UnityBuildFiles.zip && unzip UnityBuildFiles.zip
 chmod +x ./ci/build.sh && ./ci/build.sh
 ```
 
