@@ -1,9 +1,8 @@
 name: Release Scripts
 
-on:
+on: 
   release:
-    types:
-      - created
+    types: [created]
 
 jobs:
   zip-files:
@@ -14,9 +13,8 @@ jobs:
         with:
           files: .
           dest: UnityBuildTools.zip
-      - name: Upload to release
-        uses: JasonEtco/upload-to-release@master
+      - uses: svenstaro/upload-release-action@2.2.1
         with:
-          args: UnityBuildTools.zip
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          file: UnityBuildTools.zip
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
